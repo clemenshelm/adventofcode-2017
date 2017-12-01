@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { sumOfSubsequentDigits } = require('./index.js');
+const sumOfSubsequentDigits = require('./sumOfSubsequentDigits.js');
 
 describe('sumOfSubsequentDigits', () => {
   it('calculates the sum for two subsequent digits', () => {
