@@ -1,18 +1,16 @@
-const edgeNumbers = (circleNum) => {
-  const stepsToEdge =  circleNum - 1;
-
-  const circleBase = (circleNum * 2 - 1);
-  const lastNumberInCircle = circleBase * circleBase;
-  const lastEdgeNumber = lastNumberInCircle - stepsToEdge;
-  return [0, 1, 2, 3].map(num => lastEdgeNumber - num * stepsToEdge * 2);
-}
-
-const cornerNumbers = (circleNum) => edgeNumbers(circleNum).map(edgeNum => edgeNum + circleNum - 1);
-
 const firstNumberOnCircle = (circleNum) =>
   circleNum === 1 ? 1 : Math.pow(1 + ((circleNum - 2) * 2), 2) + 1;
 
 const lastNumberOnCircle = (circleNum) => Math.pow(1 + ((circleNum - 1) * 2), 2)
+
+const edgeNumbers = (circleNum) => {
+  const stepsToEdge =  circleNum - 1;
+
+  const lastEdgeNumber = lastNumberOnCircle(circleNum) - stepsToEdge;
+  return [0, 1, 2, 3].map(num => lastEdgeNumber - num * stepsToEdge * 2);
+}
+
+const cornerNumbers = (circleNum) => edgeNumbers(circleNum).map(edgeNum => edgeNum + circleNum - 1);
 
 const adjacentNumbers = (inputInt) => {
   if (inputInt === 1) {
