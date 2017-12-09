@@ -7,4 +7,4 @@ const elements = input
   .map(([, name, weight, children]) =>
     ({ name, weight: parseInt(weight, 10), children: (children && children.split(', ')) }));
 
-console.log(correctWrongElement(elements));
+console.log(correctWrongElement(elements).weight);
