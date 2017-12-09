@@ -10,10 +10,16 @@ On your command line, move to the directory of the puzzle you'd like to run. Fir
 npm install
 ```
 
-All puzzle solutions can be run with `npm start`. Pass the puzzle input as command line argument:
+All puzzle solutions can be run with `npm start`. Pass input to the puzzle as command line argument:
 
 ```shell
 npm start 12345
+```
+
+All examples come with the original input, stored in `./input`. This is how to run a puzzle with the original input:
+
+```shell
+npm start "$(< input)"
 ```
 
 There are test cases for all examples given in the puzzle description. You can run them with
