@@ -5,10 +5,7 @@ const layerConfig = input.split('\n')
   .map(line => line.match(/^(\d+): (\d+)$/))
   .reduce((obj, [, depth, range]) => ({ ...obj, [depth]: parseInt(range, 10) }), {});
 
-const getSmallestDelay = () => {
-  let delay = 0;
-  for (; catchPacket(layerConfig, delay).length !== 0; delay++) {}
-  return delay;
-}
+let delay = 0;
+for (; catchPacket(layerConfig, delay).length !== 0; delay++) {}
 
-console.log(getSmallestDelay());
+console.log(delay);
