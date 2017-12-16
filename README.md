@@ -19,7 +19,7 @@ npm start 12345
 All examples come with the original input, stored in `./input`. This is how to run a puzzle with the original input:
 
 ```shell
-npm start "$(< input)"
+npm start '$(< input)'
 ```
 
 There are test cases for all examples given in the puzzle description. You can run them with
