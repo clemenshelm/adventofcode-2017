@@ -1,0 +1,17 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "First puzzle. Woop woop!",
+  "main": "index.js",
+  "repository": "https://github.com/clemenshelm/advent-of-code-2017",
+  "author": "Clemens Helm",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha tests.js"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
